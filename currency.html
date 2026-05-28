@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курс валют — Мордовэнергосбыт (MRSB)</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="#0a4d8c"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+      <span class="brand"><b>Мордовэнергосбыт</b><span>гарантирующий поставщик · тикер MRSB</span></span>
+    </a>
+    <span class="header-spacer"></span>
+    <span class="ticker">MOEX: MRSB · энергоснабжение Республики&nbsp;Мордовия</span>
+  </header>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
+  <nav class="nav-panel" id="nav-panel">
+    <a href="index.html">О компании</a>
+    <a href="news.html">Новости</a>
+    <a href="currency.html" class="active">Курс валют</a>
+    <a href="contacts.html">Контактные данные</a>
+    <a href="video.html">Видео</a>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main>
+    <h1>Курс валют</h1>
+    <p class="lead">Калькулятор перевода рублей в румынские леи (RON) и обратно. Курс загружается на сегодня с сервиса Центрального банка России (cbr-xml-daily.ru).</p>
+
+    <div class="calc" id="currency-calc">
+      <h2>Калькулятор RUB ⇄ RON</h2>
+      <div class="row">
+        <label for="rub">Рубли (RUB)</label>
+        <input type="number" id="rub" value="1000" min="0" step="any">
+      </div>
+      <div class="row">
+        <label for="cur">Румынский лей (RON)</label>
+        <input type="number" id="cur" min="0" step="any">
+      </div>
+      <p class="rate-line" id="rate-line">Загрузка актуального курса…</p>
+    </div>
+
+    <div class="chart-wrap">
+      <h2>Динамика курса RON по дням</h2>
+      <p>Столбчатая диаграмма показывает изменение курса румынского лея за последний месяц. Щёлкните по любому столбцу, чтобы выделить его и увидеть точную дату и курс.</p>
+      <canvas id="rate-chart" height="120"></canvas>
+      <div class="chart-info" id="chart-info"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>ПАО «Мордовская энергосбытовая компания»<br>г. Саранск, ул. Большевистская, 117А</div>
+      <div>Тел.: 8 (8342) 36-48-00<br>E-mail: <a href="mailto:company@mesk.ru">company@mesk.ru</a></div>
+      <div>© 2026 Мордовэнергосбыт<br>Сайт подготовлен в учебных целях</div>
+    </div>
+  </footer>
+
+  <button id="to-top" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
